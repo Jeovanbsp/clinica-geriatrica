@@ -3,6 +3,7 @@
 Site institucional para a Clínica Geriátrica da Dra. Aisha, com foco em agendamento de consultas e apresentação da médica. 
 
 - Em Processo ainda 💻
+- Projeto Particular Direitos Pertecentes a (Dev. Jeovan Bispo e Dra. Aisha Wenzinger)
 
 ## 🔹 Tecnologias Utilizadas
 
