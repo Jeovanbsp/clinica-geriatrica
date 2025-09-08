@@ -59,8 +59,8 @@ nav a:hover {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centraliza verticalmente */
-  align-items: center;     /* centraliza horizontalmente */
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   margin: 0;
   padding: 0 10px;
@@ -109,7 +109,7 @@ main {
   font-size: 16px;
   transition: 0.3s;
   text-align: center;
-  width: fit-content;       /* largura acompanha o conteúdo */
+  width: fit-content;       /* desktop: largura acompanha conteúdo */
   margin: 20px auto 0 auto; /* centralizado horizontalmente */
 }
 
@@ -273,8 +273,10 @@ footer .copyright {
   }
 
   .btn-agendar {
-    width: fit-content;
-    margin: 20px auto 0 auto;
+    width: 100%;          /* ocupa toda a largura da caixa */
+    max-width: none;      /* remove limite de largura */
+    margin: 20px 0 0 0;   /* centralizado */
+    text-align: center;   /* garante texto centralizado */
   }
 
   .quem-sou {
@@ -306,7 +308,7 @@ footer .copyright {
   }
 
   .btn-agendar {
-    padding: 12px 20px;
+    padding: 12px 20px;   /* mantém espaçamento interno proporcional */
   }
 
   .social-icons {
