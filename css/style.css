@@ -99,7 +99,7 @@ main {
 
 /* Botão Agendar (WhatsApp) */
 .btn-agendar {
-  display: inline-block;
+  display: block;           /* garante que seja um bloco */
   background: #2ADCA1;         
   color: white;
   padding: 14px 28px;
@@ -109,9 +109,8 @@ main {
   font-size: 16px;
   transition: 0.3s;
   text-align: center;
-  width: 100%;
-  max-width: 250px;
-  margin: 0 auto;
+  width: fit-content;       /* largura acompanha o conteúdo */
+  margin: 20px auto 0 auto; /* centralizado horizontalmente */
 }
 
 .btn-agendar:hover {
@@ -274,7 +273,8 @@ footer .copyright {
   }
 
   .btn-agendar {
-    max-width: 100%;
+    width: fit-content;
+    margin: 20px auto 0 auto;
   }
 
   .quem-sou {
