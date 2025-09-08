@@ -1,4 +1,6 @@
-/* Fonte global */
+/* =========================
+   Fonte global
+========================= */
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
@@ -6,7 +8,9 @@ body {
   color: #2c3e50;
 }
 
-/* Header com imagem delicada */
+/* =========================
+   Header com imagem
+========================= */
 header {
   position: relative;
   width: 100%;
@@ -15,6 +19,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .header-img {
@@ -24,13 +29,13 @@ header {
   display: block;
 }
 
-/* Menu sobreposto ao header - botão Início à esquerda */
+/* Menu sobreposto ao header */
 nav {
   position: absolute;
   top: 15px;
   left: 30px;
   display: flex;
-  gap: 0; /* apenas um botão */
+  gap: 0;
 }
 
 nav a {
@@ -47,7 +52,9 @@ nav a:hover {
   background: #22b392;
 }
 
-/* Conteúdo principal */
+/* =========================
+   Conteúdo principal
+========================= */
 main {
   display: flex;
   justify-content: center;
@@ -56,7 +63,7 @@ main {
   align-items: center;
 }
 
-/* Seção de boas-vindas chamativa */
+/* Seção de boas-vindas (.sobre) */
 .sobre {
   background: #e0f5ef;          
   padding: 40px 30px;
@@ -74,17 +81,18 @@ main {
 
 .sobre h2 {
   color: #2ADCA1;
-  font-size: 28px;
+  font-size: clamp(20px, 5vw, 28px);
   margin-bottom: 15px;
 }
 
 .sobre p {
-  font-size: 16px;
+  font-size: clamp(14px, 4vw, 16px);
   line-height: 1.6;
   color: #2c3e50;
   margin-bottom: 25px;
 }
 
+/* Botão Agendar (WhatsApp) */
 .btn-agendar {
   display: inline-block;
   background: #2ADCA1;         
@@ -95,6 +103,8 @@ main {
   font-weight: bold;
   font-size: 16px;
   transition: 0.3s;
+  text-align: center;
+  min-width: 200px;
 }
 
 .btn-agendar:hover {
@@ -103,7 +113,7 @@ main {
 }
 
 /* Card para formulários ou seções */
-.card, .sobre {
+.card {
   background: #f8f8f8;
   padding: 25px;
   border-radius: 10px;
@@ -111,9 +121,16 @@ main {
   width: 350px;
   max-width: 90%;
   margin-bottom: 30px;
+  transition: transform 0.3s;
 }
 
-/* Seção Quem sou eu */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   Seção Quem sou eu
+========================= */
 .quem-sou {
   display: flex;
   justify-content: center;
@@ -133,6 +150,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  transition: transform 0.3s;
+}
+
+.quem-sou .caixa:hover {
+  transform: translateY(-5px);
 }
 
 .quem-sou .caixa h3 {
@@ -155,32 +177,9 @@ main {
   margin-bottom: 10px;
 }
 
-/* Responsividade simples */
-@media (max-width: 768px) {
-  .quem-sou {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .quem-sou .caixa {
-    width: 90%;
-    min-height: auto;
-  }
-
-  main {
-    margin: 20px 10px;
-  }
-
-  nav {
-    left: 10px;
-  }
-
-  .card, .sobre {
-    width: 100%;
-  }
-}
-
-/* Formulário */
+/* =========================
+   Formulário
+========================= */
 form {
   display: flex;
   flex-direction: column;
@@ -198,6 +197,8 @@ input, button, textarea {
   border: 1px solid #ccc;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button {
@@ -213,7 +214,9 @@ button:hover {
   background: #22b392;
 }
 
-/* Rodapé */
+/* =========================
+   Rodapé
+========================= */
 footer {
   background: #b3e5c4;
   padding: 20px;
@@ -248,4 +251,48 @@ footer .copyright {
 
 .social-icons img:hover {
   transform: scale(1.2);
+}
+
+/* =========================
+   Responsividade
+========================= */
+@media (max-width: 768px) {
+  .quem-sou {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quem-sou .caixa {
+    width: 90%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  main {
+    margin: 20px 10px;
+  }
+
+  nav {
+    left: 10px;
+  }
+
+  .card, .sobre {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sobre {
+    padding: 30px 20px;
+  }
+
+  .btn-agendar {
+    width: 100%;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
 }
