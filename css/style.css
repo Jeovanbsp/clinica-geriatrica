@@ -154,23 +154,6 @@ main {
   line-height: 1.5;
 }
 
-
-/* Card para formulários ou seções */
-.card {
-  background: #f8f8f8;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 350px;
-  max-width: 90%;
-  margin-bottom: 30px;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
 /* ------------------------------
    Serviços delicados (Telemedicina e Domiciliar)
 ------------------------------ */
@@ -340,18 +323,23 @@ footer .copyright {
     padding: 0 15px;
   }
 
+  /* Caixa de boas-vindas */
   .sobre {
     width: 100%;
     padding: 25px 15px;
   }
 
+  /* Botão Agendar */
   .btn-agendar {
-    width: 100%;          /* ocupa toda a largura da caixa */
-    max-width: none;      /* remove limite de largura */
-    margin: 20px 0 0 0;   /* centralizado */
-    text-align: center;   /* garante texto centralizado */
+    display: block;           /* permite centralizar com margin */
+    width: auto;              /* tamanho natural do botão */
+    margin: 20px auto 0 auto; /* centraliza horizontalmente */
+    text-align: center;       /* centraliza o texto dentro do botão */
+    font-size: 16px;          /* mantém proporção */
+    padding: 14px 28px;       /* mantém espaçamento interno */
   }
 
+  /* Quem sou eu */
   .quem-sou {
     flex-direction: column;
     align-items: center;
@@ -381,7 +369,7 @@ footer .copyright {
   }
 
   .btn-agendar {
-    padding: 12px 20px;   /* mantém espaçamento interno proporcional */
+    padding: 12px 20px;   /* espaçamento proporcional para telas pequenas */
   }
 
   .social-icons {
